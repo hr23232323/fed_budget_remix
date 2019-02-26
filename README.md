@@ -61,7 +61,7 @@ When hovering over different categories, the differen views in the multiview das
 
 
 ## Achievements
-We went above and beyond in this project, both from technical and design standpoints as shown below-
+I went above and beyond in this project, both from technical and design standpoints as shown below-
 
 ### Technical
 Here's a description of my Technical Achievements for this project.
