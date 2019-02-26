@@ -7,7 +7,20 @@ _This project aimed to better a previously made data visualization. I redesigned
 ---
 
 ### The Original
-The original 
+The original data visualization was built by the Office of Management and Budget, under the Obama Administration. It was intended to showcase the breakdown of the proposed budget and is showcased below-
+<p align="center">
+  <kbd>  <img src="img/og.JPG" width="600px">   </kbd> 
+</p>
+The visualization is a treemap with different parts of the subsection broken up into different rectangles, based on the dollar amount alloted to them. 
+
+Further, the visualziation also utilizes a hover based tool tip to showcase individual categories as can be seen below-
+<p align="center">
+  <kbd>  <img src="img/hover.JPG" width="600px">   </kbd>
+</p>
+
+From the get go, one can see many different issues with the visualization type and implementation.
+
+
 
 ### Your Task
 
