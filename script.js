@@ -54,7 +54,11 @@ function drawArea(data, vData) {
             return d.y1 - d.y0;
 
         }).attr('class', function (d) {
-            return ("box-" + d.depth);
+            if (d.parent) {
+                return ("box-" + d.depth + " " + d.parent.data.id.substring(0, 4));
+            } else {
+                return ("box-" + d.depth);
+            }
         }).attr('fill', function (d) {
             if (d.parent) {
                 return colorScale(d.parent.data.id.substring(0, 4))
@@ -72,6 +76,7 @@ function drawArea(data, vData) {
                 document.getElementById("label").innerHTML = d.parent.data.id
                 drawRad(d.parent.data.id, colorScale(d.parent.data.id.substring(0, 4)))
                 drawBar(d.parent.data.id, colorScale(d.parent.data.id.substring(0, 4)))
+                emphasize(d.parent.data.id)
             }
         }).on('mouseout', function (d) {
             if (d.parent) {
@@ -134,6 +139,18 @@ function drawArea(data, vData) {
         });
     }
 
+    function emphasize(id) {
+        var emp = d3.selectAll('rect')
+        console.log(emp)
+        emp.style('stroke-width', function (d) {
+            if (d.parent) {
+                if (d.parent.data.id == id) {
+                    return 5
+                }
+            }
+        })
+
+    }
 }
 
 function drawRad(id, col) {
