@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+}
+
+/* ---------------- LAYOUT -------------- */
+#page {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#viz {
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.vis {
+    margin: 10px;
+}
+
+
+#viz-1 {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+#viz-col {
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#viz-2 {
+    flex-basis: 0;
+    flex-grow: 2;
+
+}
+
+#viz-3 {
+    flex-basis: 0;
+    flex-grow: 3;
+
+}
+
+
+
+/* ----------------- ELEMENTS ---------------*/
+
+#viz-2 {
+    display: flex;
+    flex-flow: row;
+}
+
+#viz-2 .pie {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.legend {
+    flex-basis: 0;
+    flex-grow: 1;
+    font-family: "Verdana";
+    font-size: .7em;
+    word-wrap: break-word;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.name {
+    margin-top: 10px;
+}
+
+.legend .full {
+    font-size: 0.5em;
+    margin-top: 2px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    margin-top: 30px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.box-2 {
+    border: solid 1px #000;
+}
