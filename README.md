@@ -6,7 +6,7 @@ _This project aimed to better a previously made data visualization. I redesigned
 
 ---
 
-### The Original
+## The Original
 The original data visualization was built by the Office of Management and Budget, under the Obama Administration. It was intended to showcase the breakdown of the proposed budget and is showcased below-
 <p align="center">
   <kbd>  <img src="img/og.JPG" width="600px">   </kbd> 
@@ -21,7 +21,7 @@ Further, the visualziation also utilizes a hover-based tool tip to showcase indi
 
 The full version of this visualization can be found [here](https://obamawhitehouse.archives.gov/interactive-budget)
 
-### Critique
+## Critique
 One can see many different issues with the visualization type and treemap-based implementation. The budget breakdown is quantified using dollar amounts and the data would ideally have the following use cases-
 1. Compare different major budget categories like Social Security and Health Care
 2. Quantify the difference between different categories
@@ -32,7 +32,7 @@ One can see many different issues with the visualization type and treemap-based 
 The treemap-based approach has many shortcomings including the use of area encoding to showcase dollar amount difference. We already know that humans are fairly poor at quanitifying area differences. This makes use case #1 and #2 challenging. Additionally, comparing different spendings within or across categories is also fairly challenging as it involves hovering over the interesting spendings one by one and thus comparing. This makes use case #3 and #4 pretty challenging. The last use case is very well implemented by the data visualization as a tree map allows users to get a broad picture of the breakdown well. 
 
 
-### The Redesign
+## The Redesign
 To redesign this data visualization, I decided to focus on the above mentioned shortcomings and address them using different views. This would allow the data visualization to maintain the positives of the tree map, while allowing the user to compare and quantify differences more readily. 
 
 <img align="Left" src="img/bar.JPG" width="400px">To start off, I decided to address use-cases #1 and #2, which were based on comparison of major categories and quantification of the difference. I decided to use a bar chart to help a potential user with this task. A bar chart has been historically shown to be one of the most effective quantifying channels and was perfect for this part. As you can see on the left, I decided to emphasize the the highlighted category with a different color (and its label) while leaving the other bars out of focus to help the user both look at a single category in isolation and use hover-based changes to compare across different categories. 
@@ -47,7 +47,7 @@ These two views, in addition to the original data visualization would help fill 
 
 Very purposefully, I avoided the minor color encoding used in the original visualization as it achieves nothing (except for emphasizing different subcategories) and can be confusing for the user. Additionally, I decluttered some of the excess text on the treemap.
 
-### The Final Design
+## Implementation
 Putting all the views mentioned above together was a fairly simple task using D3. I was able to use mouseover and mouseout events to bind the different views together. I maintained the tree map as the primary view and only utilized one-way binding. The final redesign can be seen below-
 <p align="center">
   <kbd>  <img src="img/full.JPG" width="800px">   </kbd>
@@ -59,39 +59,20 @@ When hovering over different categories, the differen views in the multiview das
   <kbd>  <img src="img/demo.gif" width="800px">   </kbd>
 </p>
 
-Your task is to choose a visualization and remix it.
-By remix, we mean:
 
-- Critique the original vis
-- Redesign some aspect of it
-- Implement your redesign
+## Achievements
+We went above and beyond in this project, both from technical and design standpoints as shown below-
 
-Examples of remixes include:
-- taking a static choropleth map with a bad color scale, implementing a new version in d3, adding interactivity, and improving the color scale to show the original data in a more effective way
-- finding a poorly designed or hard-to-use interactive visualization, and making a new version with easier to use navigation, features that enable the user to explore the data in new ways, and possibly adding new views
+### Technical
+Here's a description of my Technical Achievements for this project.
+- **Data cleaning and processing script**: While the visualizations above look all good, the US federal government had a very, _very_ raw version of the data on their website. [Here's a link](https://github.com/WhiteHouse/budgetdata/blob/2016/data/outlays.csv) to the original raw data that I started with. In order to successfully recreate the treemap and create additional views, I had to write a script in python to categorize, aggregate and group relavent data from the raw CSV file. This file is also included in the repository where you can see the data manipulations that occured to recreate the original dataset.
+- **Building Treemap using D3**: I utilized one of the more complex D3 techniques by creating a treemap from scratch. The method involved manipulating my original dataset to represent a node linked csv, learning and implementing the stratify() method to convert from CSV to node-linked tree, and utilizing D3 heirarchies to implement the treemap.
+- **Multiview Binding**: I utilized hover and click-based events to bind the different views together. Additionally, I also imported different datasets for each of the views as they each needed different format of data. Moreover, I also passed relevant data between views to ensure that the focused view was expanded in the complementary views. 
 
-**Remember: the intent of this assignment is for you to demonstrate your understanding of the theory (e.g. concepts from Munzner's book) and practice (d3, and any tools you use for exploring the data) of visualization.**
+<br>
 
-Incorporating a brief writeup with your remix is a good idea.
-Communicate what the original vis was, what the major issues were, and what new things can be seen with your redesign.
-You could have text directly on the page, an "info" button, an about page, etc.
-
-### Multiple Views (potentially useful info for certain remix directions)
-One of the most powerful techniques for mitigating the shortcomings of a given visualization is to link it with other views.
-
-Linking a map to a bar or scatterplot, for instance, may allow you to overcome the shortcomings of a map.
-
-In general, linking visualizations allows you to explore different parts of the data between views, and mitigates the shortcomings of a given view by pairing it with other views.
-
-Requirements
----
-
-0. Your code should be forked from the GitHub repo and linked using GitHub pages.
-1. Your project should load a dataset you found on the web from the vis you're remixing. You may extract the data by sight if necessary. Put this file in your repo.
-2. Your project should use d3 to build a visualization of the dataset. 
-3. Your writeup (readme.md in the repo) should contain the following:
-
-- Working link to the visualization hosted on gh-pages.
-- Concise description and screenshot of your visualization.
-- Description of the technical achievements you attempted with this visualization.
-- Description of the design achievements you attempted with this visualization.
+### Design
+Here's a description of my Design Achievements for this project.
+- **CSS Flexbox for fluid layout**: I utilized CSS flexbox to create a fluid layout for my dashboard. I learnt the basics of creating flexbox-based designs and used many of those strategies to create designs which hold true even when resized (upto a certain degree). This will enable me to build more complex dashboards in the future. 
+- **Visual Feedback**: While testing my data visualization by myself and through friends, I noticed that while the hover-binding enabled users to get a more wholistic view of the data, the lack of visual feedback in my earlier iterations also made it more confusing. Based on this, I modified my bar chart from having all colors to only highlighting the focused category. I also modified my treemap to increase the stroke around the category in focus. 
+- **Redesigned Treemap**: Instead of blindly copying over the original treemap from the data visualization, I designed a more minimal and aesthetically pleasing version of the tree map that uses colors to differentiate between categories and area of differentiate between subcategories. 
