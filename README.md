@@ -39,7 +39,7 @@ To redesign this data visualization, I decided to focus on the above mentioned s
 These two views, in addition to the original data visualization would help fill in information and effectiveness gaps, but before I was ready to put everything together, I wanted to redesign the treemap to be more minimal and remove excessive information which is now expressed in the other views. My implementation of the treemap, using d3 can be seen below-
 
 <p align="center">
-  <kbd>  <img src="img/area.JPG" width="600px">   </kbd>
+  <kbd>  <img src="img/area.JPG" width="500px">   </kbd>
 </p>
 
 Very purposefully, I avoided the minor color encoding used in the original visualization as it achieves nothing (except for emphasizing different subcategories) and can be confusing for the user. Additionally, I decluttered some of the excess text on the treemap.
