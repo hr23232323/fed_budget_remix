@@ -12,17 +12,27 @@ The original data visualization was built by the Office of Management and Budget
   <kbd>  <img src="img/og.JPG" width="600px">   </kbd> 
 </p>
 The visualization is a treemap with different parts of the subsection broken up into different rectangles, based on the dollar amount alloted to them. 
+<br>
 
-Further, the visualziation also utilizes a hover based tool tip to showcase individual categories as can be seen below-
+Further, the visualziation also utilizes a hover-based tool tip to showcase individual categories and dollar amounts as can be seen below-
 <p align="center">
   <kbd>  <img src="img/hover.JPG" width="600px">   </kbd>
 </p>
 
-From the get go, one can see many different issues with the visualization type and implementation.
+The full version of this visualization can be found [here](https://obamawhitehouse.archives.gov/interactive-budget)
+
+### Critique
+One can see many different issues with the visualization type and treemap-based implementation. The budget breakdown is quantified using dollar amounts and the data would ideally have the following use cases-
+1. Compare different major budget categories like Social Security and Health Care
+2. Quantify the difference between different categories
+3. Within a category, compare different spendings like Medicare and Health Research within Health Care
+4. Compare spendings across different categories
+5. Get a "feel" of the overall budget breakdown allotment accross all categories. 
+
+The treemap-based approach has many shortcomings including the use of area encoding to showcase dollar amount difference. We already know that humans are fairly poor at quanitifying area differences. This makes use case #1 and #2 challenging. Additionally, comparing different spendings within or across categories is also fairly challenging as it involves hovering over the interesting spendings one by one and thus comparing. This makes use case #3 and #4 pretty challenging. The last use case is very well implemented by the data visualization as a tree map allows users to get a broad picture of the breakdown well. 
 
 
-
-### Your Task
+### The Redesign
 
 Your task is to choose a visualization and remix it.
 By remix, we mean:
