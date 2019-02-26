@@ -53,7 +53,11 @@ Putting all the views mentioned above together was a fairly simple task using D3
   <kbd>  <img src="img/full.JPG" width="800px">   </kbd>
 </p>
 
-When hovering over different categories, the multiview dashboard really complements each other to help the user get more information and value from the visualization. This is showcased below-
+When hovering over different categories, the differen views in the multiview dashboard really complement each other to help the user get more information and value from the visualization. This is showcased below-
+
+<p align="center">
+  <kbd>  <img src="img/demo.gif" width="800px">   </kbd>
+</p>
 
 Your task is to choose a visualization and remix it.
 By remix, we mean:
