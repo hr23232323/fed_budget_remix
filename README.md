@@ -33,6 +33,27 @@ The treemap-based approach has many shortcomings including the use of area encod
 
 
 ### The Redesign
+To redesign this data visualization, I decided to focus on the above mentioned shortcomings and address them using different views. This would allow the data visualization to maintain the positives of the tree map, while allowing the user to compare and quantify differences more readily. 
+
+<img align="Left" src="img/bar.JPG" width="400px">To start off, I decided to address use-cases #1 and #2, which were based on comparison of major categories and quantification of the difference. I decided to use a bar chart to help a potential user with this task. A bar chart has been historically shown to be one of the most effective quantifying channels and was perfect for this part. As you can see on the left, I decided to emphasize the the highlighted category with a different color (and its label) while leaving the other bars out of focus to help the user both look at a single category in isolation and use hover-based changes to compare across different categories. 
+
+<img align="Right" src="img/rad.JPG" width="400px"> Next, I addressed use-cases #3 and #4, which relied on quantifying the breakdown within a category and across multiple categories. To achieve this, I decided to utilize a pie chart which can be seen on the right. While a pie chart is not as effective as a bar chart to showcase differences, using a pie chart enables the user to see the subcategory as part of the whole to both get a feel of the breakdown and also get the difference. Additionally, I also encoded the dollar amount in the legend to further help the user with quantifying difference. 
+
+These two views, in addition to the original data visualization would help fill in information and effectiveness gaps, but before I was ready to put everything together, I wanted to redesign the treemap to be more minimal and remove excessive information which is now expressed in the other views. My implementation of the treemap, using d3 can be seen below-
+
+<p align="center">
+  <kbd>  <img src="img/area.JPG" width="600px">   </kbd>
+</p>
+
+Very purposefully, I avoided the minor color encoding used in the original visualization as it achieves nothing (except for emphasizing different subcategories) and can be confusing for the user. Additionally, I decluttered some of the excess text on the treemap.
+
+### The Final Design
+Putting all the views mentioned above together was a fairly simple task using D3. I was able to use mouseover and mouseout events to bind the different views together. I maintained the tree map as the primary view and only utilized one-way binding. The final redesign can be seen below-
+<p align="center">
+  <kbd>  <img src="img/full.JPG" width="800px">   </kbd>
+</p>
+
+When hovering over different categories, the multiview dashboard really complements each other to help the user get more information and value from the visualization. This is showcased below-
 
 Your task is to choose a visualization and remix it.
 By remix, we mean:
