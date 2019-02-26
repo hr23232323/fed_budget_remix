@@ -11,10 +11,7 @@ The original data visualization was built by the Office of Management and Budget
 <p align="center">
   <kbd>  <img src="img/og.JPG" width="600px">   </kbd> 
 </p>
-The visualization is a treemap with different parts of the subsection broken up into different rectangles, based on the dollar amount alloted to them. 
-<br>
-
-Further, the visualziation also utilizes a hover-based tool tip to showcase individual categories and dollar amounts as can be seen below-
+The visualization is a treemap with different parts of the subsection broken up into different rectangles, based on the dollar amount alloted to them. Further, the visualziation also utilizes a hover-based tool tip to showcase individual categories and dollar amounts as can be seen below-
 <p align="center">
   <kbd>  <img src="img/hover.JPG" width="600px">   </kbd>
 </p>
