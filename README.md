@@ -1,7 +1,13 @@
-Assignment 4 - ~~Visualizations and Multiple Views~~ DataVis Remix!  
-===
+# Data Visualization Remix!
+_This project aimed to better a previously made data visualization. I redesigned and built a breakdown of the 2016 Federal Budget submission by president Barack Obama, using D3.js to make it both more quanitative and understandable. The following outlines my process._
 
-The primary aim of this assignment is to showcase your **individual** skills at critiquing and creating interactive visualizations on the web.
+#### Developer: Harsh Rana 
+[Link to project](https://hr23232323.github.io/04-Remix/)
+
+---
+
+### The Original
+The original 
 
 ### Your Task
 
