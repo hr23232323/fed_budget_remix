@@ -53,7 +53,7 @@ Putting all the views mentioned above together was a fairly simple task using D3
 When hovering over different categories, the differen views in the multiview dashboard really complement each other to help the user get more information and value from the visualization. This is showcased below-
 
 <p align="center">
-  <kbd>  <img src="img/demo.gif" width="800px">   </kbd>
+   <img src="img/demo.gif" width="800px">   
 </p>
 
 
